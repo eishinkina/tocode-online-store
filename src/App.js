@@ -5,6 +5,7 @@ import './assets/scss/main.scss'
 
 // pages:
 import HomePage from './pages/Home'
+import ProductItemPage from './pages/Home/ProductItem'
 import AboutPage from './pages/About'
 import NotFoundPage from './pages/NotFound'
 
@@ -18,6 +19,7 @@ const App = () => {
       <div className='ui-content-wrapper'>
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/:itemAlias' element={<ProductItemPage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
