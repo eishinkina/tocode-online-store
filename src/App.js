@@ -22,7 +22,8 @@ const App = () => {
           <Route path='/products/' element={<Navigate to='/' />} />
           <Route path='/products/:itemAlias' element={<ProductItemPage />} />
           <Route path='/about' element={<AboutPage />} />
-          <Route path='*' element={<NotFoundPage />} />
+          <Route path='/404' element={<NotFoundPage />} />
+          <Route path='*' element={<Navigate to='404' />} />
         </Routes>
       </div>
       <Footer />
