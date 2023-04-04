@@ -4,7 +4,7 @@ import products from 'seeders/Products'
 import { Container } from '../../../layouts'
 
 const ProductItemPage = () => {
-  const [item, setItem] = useState(null)
+  const [item, setItem] = useState(true)
   const { itemAlias } = useParams()
   const navigate = useNavigate()
   useEffect(() => {
@@ -22,22 +22,16 @@ const ProductItemPage = () => {
       <h1 className='ui-title-1 mb-4'>{item.title}</h1>
       <span>{item.price}</span>
       {/* controls */}
-      <div className="flex mt-4">
-      <Link className='ui-button isLink' to='/'>
-        Add to home
-      </Link>
-      <Link className='ui-button isPrimary'>
-        Add to cart
-      </Link>
+      <div className='flex mt-4'>
+        <Link className='ui-button isLink' to='/'>
+          Add to home
+        </Link>
+        <Link className='ui-button isPrimary'>Add to cart</Link>
       </div>
     </div>
   )
 
-  return (
-    <Container>
-      {renderContent}
-    </Container>
-  )
-}
+  return <Container>{renderContent}</Container>
+  }
 
 export default ProductItemPage
