@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 import './assets/scss/main.scss'
 
@@ -19,7 +19,8 @@ const App = () => {
       <div className='ui-content-wrapper'>
         <Routes>
           <Route path='/' element={<HomePage />} />
-          <Route path='/:itemAlias' element={<ProductItemPage />} />
+          <Route path='/products/' element={<Navigate to='/' />} />
+          <Route path='/products/:itemAlias' element={<ProductItemPage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
