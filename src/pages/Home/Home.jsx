@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import { Carousel } from 'react-responsive-carousel'
 
 import { Container } from '../../layouts'
 
@@ -9,19 +11,21 @@ const HomePage = () => {
   return (
     <Container>
       <div className='flex flex-wrap mt-4'>
-        {products.map((item) => (
-          <div
-            className='ui-card isAnimated mr-4 mb-4'
-            key={item.id}
-            style={{ maxWidth: '420px' }}
-          >
-            <div className='ui-card-body'>
+        <Carousel
+          showArrows
+          // autoPlay
+          // emulateTouch
+          infiniteLoop
+          showThumbs={false}
+        >
+          {products.map((item) => (
+            <div className='flex items-center justify-center' key={item.id}>
               <img
                 src={item.img}
                 alt={item.title}
                 style={{ maxWidth: '320px' }}
               />
-              <div className='flex flex-col items-center'>
+              <div className='flex flex-col items-start'>
                 <span className='ui-title-3 mb-2'>{item.title}</span>
                 <span className='mb-4'>{item.price}</span>
                 <Link to={`/products/${item.alias}`}>
@@ -29,8 +33,8 @@ const HomePage = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </Carousel>
       </div>
     </Container>
   )
