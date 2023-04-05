@@ -1,9 +1,11 @@
 import React from "react";
 import  propTypes  from "prop-types";
 
+
+export const TestContext = React.createContext(null)
 const Store = ({children}) => {
-  console.log(123)
-  return children
+  const test = 'hello world'
+  return <TestContext.Provider value={test}>{children}</TestContext.Provider>
 
 }
 

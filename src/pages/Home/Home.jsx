@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
+//карусель
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
-
+//store
+import { TestContext } from 'Store'
+// components
 import { Container } from '../../layouts'
-
+//data
 import products from './../../seeders/Products'
 
 const HomePage = () => {
+  const test = useContext(TestContext)
   return (
     <Container>
+      {test}
       <div className='flex flex-wrap mt-4'>
         <Carousel
           showArrows
