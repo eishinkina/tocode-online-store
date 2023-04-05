@@ -8,8 +8,12 @@ import './Header.scss'
 
 import { Container } from 'layouts'
 
+
+
 // icons:
 import { ReactComponent as LogoIcon } from 'assets/img/logo.svg'
+import { ReactComponent as BagIcon } from 'assets/img/bag.svg'
+
 
 const menuLinks = [
   {
@@ -19,6 +23,10 @@ const menuLinks = [
   {
     title: 'About',
     alias: '/about',
+  },
+  {
+    title: <BagIcon />,
+    alias: '/checkout',
   },
 ]
 

@@ -8,6 +8,7 @@ import HomePage from './pages/Home'
 import ProductItemPage from './pages/Home/ProductItem'
 import AboutPage from './pages/About'
 import NotFoundPage from './pages/NotFound'
+import CheckoutPage from 'pages/checkout'
 
 // components:
 import { Header, Footer } from './components'
@@ -22,6 +23,7 @@ const App = () => {
           <Route path='/products/' element={<Navigate to='/' />} />
           <Route path='/products/:itemAlias' element={<ProductItemPage />} />
           <Route path='/about' element={<AboutPage />} />
+          <Route path='/checkout' element={<CheckoutPage />} />
           <Route path='/404' element={<NotFoundPage />} />
           <Route path='*' element={<Navigate to='404' />} />
         </Routes>
