@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import  propTypes  from "prop-types";
 
+export const ProductsContext = React.createContext()
 
-export const TestContext = React.createContext(null)
 const Store = ({children}) => {
-  const test = 'hello world'
-  return <TestContext.Provider value={test}>{children}</TestContext.Provider>
+  const [products, setProducts] = useState([])
+  const productsContext = React.useMemo(
+    ()=>[products, setProducts],
+    [products, setProducts]
+  )
+
+  useEffect(()=>console.log(products, [products]))
+
+  return <ProductsContext.Provider value={productsContext}>{children}</ProductsContext.Provider>
 
 }
 

@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
 //store
-import { TestContext } from 'Store'
+// import { TestContext } from 'Store'
 // components
 import { Container } from '../../layouts'
 //data
 import products from './../../seeders/Products'
 
 const HomePage = () => {
-  const test = useContext(TestContext)
+  // const test = useContext(TestContext)
   return (
     <Container>
-      {test}
+      {/* {test} */}
       <div className='flex flex-wrap mt-4'>
         <Carousel
           showArrows
