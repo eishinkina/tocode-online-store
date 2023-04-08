@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 ///store
 import { ProductsContext } from 'Store'
 import { Container } from '../../layouts'
+import numeral from 'numeral'
 
 const productStyle = {
   width: '100%',
@@ -57,6 +58,29 @@ const CheckoutPage = () => {
       <div className='flex flex-col items-center'>
         <h1 className='ui-title-1 mb-4'>Checkout</h1>
         {renderContent}
+        {products && products.length > 0 && (
+          <p>
+            Total price:{' '}
+            <span>
+              $
+              {numeral(
+                products.reduce(
+                  (sum, product) =>
+                    (sum += parseFloat(
+                      product.price.replace('$', '').replace('.', '')
+                    )),
+                  0
+                )
+              ).format('0.0')}
+            </span>{' '}
+          </p>
+        )}
+        {products && products.length > 0 && (
+          <p>
+            Number of goods : <span>{products.length} items</span>
+          </p>
+        )}
+
         {renderControls}
       </div>
     </Container>
