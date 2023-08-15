@@ -24,7 +24,7 @@ const App = () => {
           <Route path='/products/:itemAlias' element={<ProductItemPage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='/checkout' element={<CheckoutPage />} />
-          <Route path='/404' element={<NotFoundPage />} />
+          <Route path='/404' element={<HomePage />} />
           <Route path='*' element={<Navigate to='404' />} />
         </Routes>
       </div>
