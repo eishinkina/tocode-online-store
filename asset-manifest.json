@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/tocode-online-store/static/css/main.0f158455.css",
+    "main.js": "/tocode-online-store/static/js/main.c105214c.js",
+    "static/media/product-4.png": "/tocode-online-store/static/media/product-4.06c356f88eb852fd58bd.png",
+    "static/media/product-1.png": "/tocode-online-store/static/media/product-1.05d9684de945c55f1c5b.png",
+    "static/media/product-2.png": "/tocode-online-store/static/media/product-2.dda698851436ac888f60.png",
+    "static/media/product-3.png": "/tocode-online-store/static/media/product-3.fae1e2a606021a015831.png",
+    "index.html": "/tocode-online-store/index.html",
+    "static/media/bag.svg": "/tocode-online-store/static/media/bag.820a7bc158217e27b6d34aa500ac8aaa.svg",
+    "static/media/logo.svg": "/tocode-online-store/static/media/logo.f985cb45c08a4e7df293cfe420e76918.svg",
+    "main.0f158455.css.map": "/tocode-online-store/static/css/main.0f158455.css.map",
+    "main.c105214c.js.map": "/tocode-online-store/static/js/main.c105214c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f158455.css",
+    "static/js/main.c105214c.js"
+  ]
+}
